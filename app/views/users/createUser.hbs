@@ -1,0 +1,58 @@
+<div class="container pt-5 pb-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/users">All users</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create an new user</li>
+        </ol>
+    </nav>
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+<form action="/users/create" method="POST">
+    <div class="container">
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="firstName" placeholder="First name" name="firstName">
+                <label for="floatingInput">First Name</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="lastName" placeholder="Last name" name="lastName">
+                <label for="floatingInput">Last Name</label>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                <label for="floatingInput">Email</label>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                <label for="floatingInput">Password</label>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="phone" class="form-control" id="phone" placeholder="Phone" name="phone">
+                <label for="floatingInput">Phone</label>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+</div>

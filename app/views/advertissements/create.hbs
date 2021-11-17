@@ -1,0 +1,73 @@
+<div class="container pt-5 pb-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/advertissements">All advertissements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create an new advertissement</li>
+        </ol>
+    </nav>
+
+    {{#if alert}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{alert}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+
+    <form action="/advertissements/create" class="rown g-3-validation" method="POST">
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Title" name="title">
+                <label for="floatingInput">Title</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Description" name="description">
+                <label for="floatingInput">Description</label>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Company" name="company">
+                <label for="floatingInput">Company</label>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Introduction" name="intro">
+                <label for="floatingInput">Introduction</label>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="City" name="city">
+                <label for="floatingInput">City</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Duration" name="duration">
+                <label for="floatingInput">Duration</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Sector" name="sector">
+                <label for="floatingInput">Sector</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Type" name="contractType">
+                <label for="floatingInput">Contract Type</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+
+</div>

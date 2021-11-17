@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--Boostrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <title>Job Board</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 nav-pages">
+                    <a href="/" class="navbar-brand">Job Board</a>
+                    <a href="/" class="active">Found a job</a>
+                    <a href="/login">Login</a>
+                    {{#unless req.email}}
+                    <a href="/login/register">Register</a>
+                    {{/unless }}
+                </div>
+                <div class="col-md-6 profil">
+                    <button class="btn btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{#if req.email}}
+                        Hi {{ req.email }}
+                        {{else }}
+                        Profil
+                        {{/if}}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">                        
+                        <a class="dropdown-item" href="/users">Users management</a>
+                        <a class="dropdown-item" href="/advertissements">Advertissements management</a>
+                        <hr class="line">
+                        {{#if req.email}}
+                        <a class="dropdown-item" href="/login/logout">Log out</a>
+                        {{/if}}
+                    </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+<div class="grey-background">
+</div>
+    {{{body}}}
+ 
+    {{!-- SCRIPT  --}}
+    <script src="monscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

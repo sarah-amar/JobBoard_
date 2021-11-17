@@ -1,0 +1,136 @@
+<div class="container container-searchbar">
+    <form class="" method="POST" action="" novalidate>
+        <div class="search justify-content-md-center">
+            <input class="form-control me-2" type="search" placeholder="What is your dream job ?" aria-label="Search"
+                name="search">
+            <button class="btn btn-outline" type="submit"><i class="bi bi-search"></i></button>
+        </div>
+    </form>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col col-lg-2 filter">
+            <button class="btn btn-filter"><i class="bi bi-filter"></i> Filter</button>
+            <div class="all-filters">
+                <p>Where?</p>
+                <form action="" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="City" name="searchCity">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1"><i
+                                class="bi bi-search"></i></button>
+                    </div>
+                </form>
+
+                <p>What type of contract?</p>
+                <form action="" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Type of contract" name="searchContract">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1"><i
+                                class="bi bi-search"></i></button>
+                    </div>
+                </form>
+
+                <p>Which company?</p>
+                <form action="/company" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Company" name="searchCompany">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon1"><i
+                                class="bi bi-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md col-adversitssements">
+            <p class="subtitle">Recents advertissements</p>
+           
+            {{#each advertissements}}
+             {{#if alert}}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{alert}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.title}}</h5>
+
+                    <div class="infos">
+                        <p class="company_title"><span><i class="bi bi-building"></i>{{this.company}}</span></p>
+                        <p><span><i class="bi bi-geo-fill"></i>{{this.city}}</span></p>
+                    </div>
+
+                    <div class="intro">
+                        <p class="card-subtitle">{{this.intro}}</p>
+                    </div>
+
+                    <span class="more">
+                        <p class="card-subtitle description">{{this.description}}</p>
+                        <div class="informations">
+                            <p class="card-subtitle">Sector : {{this.sector}}</p>
+                            <p class="card-subtitle">Contract : {{this.contractType}}</p>
+                            <p class="card-subtitle">Duration : {{this.duration}} months</p>
+                        </div>
+                    </span>
+
+
+                    <button class="btn button">Learn more <i class="bi bi-caret-down-fill"></i></button>
+                    <button class="btn apply">Apply</button>
+
+
+
+                    <form class="form" action="/" method="POST">
+
+                        <div class="mb-3">
+                            <label for="firstname" class="col-sm-2 col-form-label">First name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    value={{../req.firstname}}>
+                                {{!-- <p>hi {{ this.email }}</p> --}}
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lastname" class="col-sm-2 col-form-label">Last name</label>
+                            <div class="col-sm-10">
+                                <input type="name" class="form-control" id="inputName" name="lastName"
+                                    value={{../req.lastname}}>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputMail" name="email"
+                                    value={{../req.email}}>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="inputPhone" class="col-sm-2 col-form-label">Phone</label>
+                            <div class="col-sm-10">
+                                <input type="tel" class="form-control" id="inputPhone" name="phone"
+                                    value={{../req.phone}}>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="FormControlTextarea" class="form-label">Why you would be the ideal
+                                candidate?</label>
+                            <textarea class="form-control" id="FormControlTextarea" rows="3" name="message"></textarea>
+                        </div>
+
+                        <div class="mb-9 justify-content-end">
+                            <button type="submit" class="btn btn mb-3" name="id" value={{this.id}}>Send your application
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <br>
+            {{/each}}
+        </div>
+    </div>
+</div>

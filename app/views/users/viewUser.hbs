@@ -1,0 +1,90 @@
+<h1>Hello from view user</h1>
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/user">User</a></li>
+            <li class="breadcrumb-item active" aria-current="page">View User</li>
+        </ol>
+    </nav>
+
+    <div class="view-user p-5">
+        {{#each toto}}
+        <div class="row mb-5">
+            <div class="col text-center">
+                {{!-- <h3>{{this.firstName}} {{this.lastName}}</h3> --}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Comments</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        {{!-- <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td> --}}
+                        <th scope="row">{{this.firstName}}</th>
+                        <td>{{this.lastName}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.phone}}</td>
+                        <td>{{this.comments}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{!-- <div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/user">User</a></li>
+            <li class="breadcrumb-item active" aria-current="page">View User</li>
+        </ol>
+    </nav>
+
+    <div class="view-user p-5">
+        {{#each user}}
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h3>{{this.firstName}} {{this.lastName}}</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Comments</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th scope="row">{{this.firstName}}</th>
+                        <td>{{this.lastName}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.phone}}</td>
+                        <td>{{this.comments}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div> --}}

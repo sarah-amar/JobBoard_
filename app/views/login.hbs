@@ -1,0 +1,56 @@
+{{!-- <!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Job Board</title>
+</head> --}}
+
+<div class="row">
+  <div class="col-6"><h1>Login</h1></div>
+</div>
+{{#if req}}
+<h1>Hi {{ req.email }} </h1>
+{{/if}}
+
+{{#if alertSuccess}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alertSuccess}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+{{#if error}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{error}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<form action="/login" class="rown g-3-validation" method="POST">
+<div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" placeholder="Email" type="text" id="email" name="email">
+            <label for="email">Email</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input class="form-control" placeholder="password" type="password" id="password" name="password">
+            <label for="password">Password</label>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+
+{{#if req.email}}
+<div class="row">
+    <div>
+        <a class="dropdown-item" href="/login/logout">Wanna Log out ?</a>
+    </div>
+</div>
+{{/if}}

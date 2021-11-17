@@ -1,0 +1,183 @@
+* {
+    font-family: 'Helvetica', sans-serif;
+}
+/****************MAIN.JS****************/
+/***NAVBAR***/
+
+.navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.7em;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    padding-top: 20px;
+}
+
+.nav-pages a{
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+.profil {
+    text-align: end;
+}
+
+.profil .btn{
+    background: #595ED9;
+    color: white;
+}
+
+
+.navbar {
+    border: 1px solid black;
+}
+
+.menu {
+    display: flex;
+}
+
+.active {
+    border-bottom: 1px solid black;
+}
+
+.line {
+    border: 1px solid #595ED9;
+}
+
+/********************HOMEPAGE********************************************/
+.grey-background {
+    margin-top: 10px;
+    height: 100px;
+    background: #F3F3F4;
+}
+
+.container-searchbar {
+    margin-top: 10px;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    width: 400px;
+}
+
+.search .btn {
+    background: #595ED9;
+}
+
+.search i {
+    color: white;
+}
+
+.search .btn:hover {
+   background: #595ED9;
+}
+
+.search i:hover {
+    color: white;
+}
+
+.searchFilter{
+    padding: 10px 0;
+}
+
+
+/****ADS DISPLAY*******/
+.col-adversitssements {
+    background: #F3F3F4;
+}
+
+.subtitle {
+    color: #969697;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infos i{
+    margin-right: 8px;
+}
+
+.infos .company_title{
+    font-weight: bold;
+}
+
+.intro {
+    margin: 6px 0;
+}
+
+.more {
+    display: none; 
+}
+
+.description {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.form {
+    display: none;
+    margin-top: 20px;
+    background: #F3F3F4;
+    padding: 20px;
+}
+
+
+.form .btn{
+    border: 1px solid #595ED9;
+    color: #595ED9;
+}
+
+.informations {
+    margin-top: 10px;
+}
+
+.informations p{
+    padding: 10px;
+}
+
+.button { 
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+    background: transparent;
+} 
+
+.apply {
+    border: none;
+    color: white;
+    background: #595ED9;
+    padding: 5px 25px;
+    margin-left: 25px;
+    /* margin-bottom: 10px; */
+}
+
+/* ************PROFIL***************** */
+
+
+.col-3{
+    background: #F3F3F4;
+
+}
+
+.resume {
+    display: block;
+}
+
+.edit {
+    border: none;
+    background: transparent;
+}
+
+@media screen and (max-width: 700px) {
+    .all-filters {
+        display: none;
+    }
+  }

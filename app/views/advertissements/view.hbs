@@ -1,0 +1,44 @@
+
+<div class="container pt-5 pb-5">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/advertissements">All advertissements</a></li>
+        <li class="breadcrumb-item active" aria-current="page">View</li>
+    </ol>
+</nav>
+
+<div class="view-user p-5">
+    {{#each data}}
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h3>{{this.title}}</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Sector</th>
+                            <th scope="col">Contract Type</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th scope="row">{{this.title}}</th>
+                        <td>{{this.description}}</td>
+                        <td>{{this.duration}}</td>
+                        <td>{{this.sector}}</td>
+                        <td>{{this.intro}}</td>
+                        <td>{{this.contractType}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    {{/each}}
+</div>
+</div>
